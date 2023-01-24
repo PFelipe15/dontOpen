@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+  ;
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     const button = document.querySelector('.nao')
 
     // gerando novas coordenadas aleatoriamente
-    const newLeft = Math.floor(Math.random() *800);
+    const newLeft = Math.floor(Math.random() * 800);
     const newTop = Math.floor(Math.random() * 800);
     const newBottom = Math.floor(Math.random() * 800);
     const newRigth = Math.floor(Math.random() * 800);
@@ -23,15 +23,18 @@ function App() {
 
 
 
-
   return (
     <div className="App">
 
-      <h1 className='title'>Você quer Namorar Comigo?</h1>
+      <h1 className='title '>Você quer Namorar Comigo?</h1>
       <div className="container">
 
 
-        <button className='sim' >Sim</button>
+
+        <button className='sim' onClick={() => {
+          alert("Obrigado por aceitar por livre e espontânea vontade")
+        }} >Sim</button>
+
         <button className='nao' onClick={() => {
           handleClick()
         }} >Não</button>
