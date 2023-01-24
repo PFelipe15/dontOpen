@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-  ;
+import { toast, ToastContainer } from 'react-toastify'
 import './App.css'
-
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 
   const handleClick = () => {
@@ -21,7 +21,20 @@ function App() {
 
   }
 
+  function notify() {
 
+
+    toast.success("Obrigado por aceitar namorar comigo por livre e espontânea vontade ", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: 1,
+      theme: "colored",
+    });
+  }
 
   return (
     <div className="App">
@@ -30,9 +43,8 @@ function App() {
       <div className="container">
 
 
-
         <button className='sim' onClick={() => {
-          alert("Obrigado por aceitar por livre e espontânea vontade!!")
+          notify()
         }} >Sim</button>
 
         <button className='nao' onClick={() => {
@@ -41,6 +53,19 @@ function App() {
       </div>
 
 
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        limit={2}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   )
 }
