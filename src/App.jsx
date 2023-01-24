@@ -32,7 +32,7 @@ function App() {
 
 
         <button className='sim' onClick={() => {
-          alert("Obrigado por aceitar por livre e espontânea vontade")
+          alert("Obrigado por aceitar por livre e espontânea vontade!!")
         }} >Sim</button>
 
         <button className='nao' onClick={() => {
