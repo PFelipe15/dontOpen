@@ -24,16 +24,7 @@ function App() {
   function notify() {
 
 
-    toast.success("Obrigado por aceitar namorar comigo por livre e espontânea vontade ", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: 1,
-      theme: "colored",
-    });
+    toast.success("Obrigado por aceitar namorar comigo por livre e espontânea vontade ")
   }
 
   return (
@@ -54,17 +45,7 @@ function App() {
 
 
       <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        limit={2}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
+
       />
     </div>
   )
